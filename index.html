@@ -95,7 +95,52 @@
         </div>
     </section>
     
+ <section class="busca-certificado text-center py-8">
+  <h2>Busca tu Certificado</h2>
+  <form id="buscarCertificadoForm" class="mb-4">
+    <input type="text" id="nombreCertificado" placeholder="Escribe tu nombre" required
+           class="px-4 py-2 rounded text-black border shadow" />
+    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
+      Buscar
+    </button>
+  </form>
+  <div id="resultadoCertificado"></div>
+</section>
+
+
+
   </main>
 <script src="/PaginaProyecto/script.js"></script>
+
+<script>
+document.getElementById('buscarCertificadoForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const nombre = document.getElementById('nombreCertificado').value.trim();
+  const resultadoDiv = document.getElementById('resultadoCertificado');
+  resultadoDiv.innerHTML = "Buscando...";
+
+  fetch('http://localhost:3001/certificados')
+    .then(res => res.json())
+    .then(certificados => {
+      // Busca por nombre (ignora mayúsculas/minúsculas)
+      const certificado = certificados.find(c => c.nombre.toLowerCase() === nombre.toLowerCase());
+      if (certificado) {
+        resultadoDiv.innerHTML = `
+          <a href="http://localhost:3001/archivos/${certificado.archivo}" target="_blank" 
+             class="inline-block bg-green-500 text-white px-6 py-2 rounded shadow hover:bg-green-700 transition">
+            Descargar certificado de ${certificado.nombre}
+          </a>
+        `;
+      } else {
+        resultadoDiv.innerHTML = `<span style="color:red;">No se encontró un certificado con ese nombre.</span>`;
+      }
+    })
+    .catch(err => {
+      resultadoDiv.innerHTML = `<span style="color:red;">Error al buscar el certificado.</span>`;
+    });
+});
+</script>
+
+
 </body>
 </html>
