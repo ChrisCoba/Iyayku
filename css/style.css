@@ -3,11 +3,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-  background-image: url('./Images/fondo.jpg');
+  background-image: url('/PaginaProyecto/Images/fondo.jpg');
   background-size: cover;
   background-repeat: repeat-x;
-  background-position: 0 0;
-  animation: moverFondo 60s linear infinite;
 }
 
 header {
@@ -32,205 +30,7 @@ nav ul {
   margin: 0 20px 0 0;
 }
 
-.letras_menu a {
-  font-size: 14px;
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
 
-.letras_menu a:hover {
-  color: blue;
-}
-
-.flex {
-  display: flex;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.social-icons {
-  display: flex;
-  align-items: center;
-}
-
-.social-icons > a + a {
-  margin-left: 16px;
-}
-
-.social-icons a img,
-#searchToggle img {
-  width: 28px;
-  height: 28px;
-  transition: transform 0.1s ease;
-}
-
-.social-icons a:hover img,
-#searchToggle:hover img {
-  transform: scale(1.1);
-}
-
-#searchInput {
-  display: none;
-  margin-left: 10px;
-  padding: 5px 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  transition: opacity 0.3s ease;
-  color: black;
-}
-
-#searchInput.visible {
-  display: inline-block;
-}
-
-a {
-  cursor: pointer;
-}
-
-.titulo-convenios {
-  text-align: center;
-  padding: 30px 20px 10px;
-}
-
-.titulo-convenios h2 {
-  font-size: 40px;
-  color: #ffffff;
-  margin-bottom: 8px;
-}
-
-.titulo-convenios p {
-  font-size: 25px;
-  color: #ffffff;
-  margin: 10;
-}
-
-.slider-convenios {
-  background-color: white;
-  padding: 100px 20px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-}
-
-.slider-container {
-  display: flex;
-  gap: 300px;
-  transition: transform 0.5s ease-in-out;
-  align-items: center;
-  will-change: transform;
-}
-
-.slider-container img {
-  max-height: 180px;
-  height: auto;
-  width: auto;
-  object-fit: contain;
-  flex-shrink: 0;
-  transition: transform 0.3s ease;
-}
-
-.slider-container img:hover {
-  transform: scale(1.05);
-}
-
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 28px;
-  background-color: rgba(0, 0, 0, 0.1);
-  color: #000;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  z-index: 2;
-  transition: background-color 0.3s ease;
-}
-
-.slider-btn:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.slider-btn.prev {
-  left: 0;
-}
-
-.slider-btn.next {
-  right: 0;
-}
-
-.nuestros-servicios {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  padding: 60px 20px;
-  background: transparent;
-  gap: 300px;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.servicios-texto {
-  flex: 1 1 400px;
-  max-width: 600px;
-}
-
-.servicios-texto h2 {
-  font-size: 3.1rem;
-  margin-bottom: 15px;
-}
-
-.servicios-texto p {
-  font-size: 1.3rem;
-  margin-bottom: 45px;
-  color: rgb(192, 192, 192);
-  line-height: 1.5;
-}
-
-.servicios-texto ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.servicios-texto li {
-  margin-bottom: 12px;
-  font-size: 1.05rem;
-  position: relative;
-  padding-left: 25px;
-  color: white;
-}
-
-.servicios-texto li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-.servicios-imagen {
-  flex: 1 1 300px;
-  max-width: 450px;
-  display: flex;
-  justify-content: center;
-}
-
-.servicios-imagen img {
-  width: 600px;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-}
 
 .estadisticas {
   background-color: #ffffff;
@@ -264,8 +64,6 @@ a {
   color: #007BFF;
   margin-top: 10px;
 }
-
-/* Media Queries para Responsividad */
 
 /* Dispositivos medianos (tablets, 768px y superiores) */
 @media (max-width: 1024px) {
@@ -351,7 +149,7 @@ a {
 
 .mision-nosotros {
   display: flex;
-  width: 100vw; /* 👈 cambia de 100% a 100vw para ocupar toda la pantalla */
+  width: 100vw; 
   background-color: white;
   justify-content: center;
   align-items: center;
@@ -360,7 +158,7 @@ a {
   gap: 180px;
   flex-wrap: wrap;
   box-sizing: border-box;
-  margin: 0; /* elimina márgenes si los hubiera */
+  margin: 0; 
 }
 
 .mision-texto {
@@ -462,74 +260,3 @@ a {
   color: #ffffff;
 }
 
-/* Centrar los cards */
-.card-slider {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2em;
-}
-
-/* Estilo de las tarjetas */
-.card {
-  transition: all 0.3s ease;
-  width: 250px; /* o el tamaño que necesites */
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 15px;
-}
-
-/* Hover suave */
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-.publicaciones-info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 20px;
-  background: transparent;
-  color: white;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.publicaciones-texto {
-  max-width: 800px;
-}
-
-.publicaciones-texto h2 {
-  font-size: 2.8rem;
-  margin-bottom: 30px;
-  color: white;
-  text-align: center;
-}
-
-.publicaciones-texto ul {
-  list-style: none;
-  padding: 0;
-  text-align: justify;
-}
-
-.publicaciones-texto li {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  color: white;
-  position: relative;
-  padding-left: 25px;
-}
-
-.publicaciones-texto li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: white;
-  font-weight: bold;
-}

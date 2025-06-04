@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/PaginaProyecto/css/style.css" />
   <link rel="stylesheet" href="/PaginaProyecto/css/menu.css" />
-  <link rel="stylesheet" href="/PaginaProyecto/css/servicios.css" />
+  <link rel="stylesheet" href="/PaginaProyecto/css/registro.css" />
   <title>Iyayku – Innova Editores</title>
 </head>
-<body class="bg-blue-800 text-white font-sans">
+<body class="text-white font-sans">
+
 
   <!-- HEADER -->
   <header class="bg-white text-black flex flex-wrap items-center justify-between px-6 py-4 shadow-md">
@@ -30,7 +31,7 @@
         </ul>
     </nav>
 
-   <div class="social-icons">
+     <div class="social-icons">
             <!-- WhatsApp -->
             <a href="https://api.whatsapp.com/send?phone=593997000496&text=%C2%A1Hola%20Iyayku%20Innova%20Editores!%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20informaci%C3%B3n%20acerca%20de%20la%20asesor%C3%ADa%20y%20publicaci%C3%B3n%20de%20art%C3%ADculos%20cient%C3%ADficos.%20%E2%9C%8D%EF%B8%8F%F0%9F%93%8A%F0%9F%93%9D"
                 target="_blank" rel="noopener noreferrer">
@@ -61,41 +62,45 @@
 
   <!-- MAIN -->
   <main>
-
-    <section class="nuestros-servicios">
-            <div class="servicios-texto">
-                <h2>Nuestros Servicios</h2>
-                <p> Nuestro equipo de especialistas en publicaciones científicas está dedicado a nutrir tu trabajo desde la idea inicial hasta su publicación en revistas de alto impacto</p>
-                <ul>
-                <li>Desarrollo de proyectos y planes de investigación</li>
-                <li>Desarrollo de Tesis de Pregrado, Posgrado y Doctorado</li>
-                <li>Publicación de artículos en: SCOPUS (Q1-Q4), WoS, Scielo, Latindex Catálogo 2.0, otros</li>
-                <li>Publicación de libros digitales y físicos</li>
-                <li>Publicación de Tesis como libro o artículo científico</li>
-                <li>Creación de revistas científicas a nivel nacional e internacional</li>
-                <li>Asesorías para Indexación de revistas en Latindex 2.0, Scielo y Scopus</li>
-                <li>Capacitación personalizada en todas las áreas</li>
-                </ul>
-            </div>
-        <div class="servicios-imagen">
-            <img src="/PaginaProyecto/Images/servicios.jpg" alt="Nuestros Servicios">
+     <div class="container" id="container">
+      <div class="form-container sign-up">
+        <form>
+          <h1>Crear Cuenta</h1>
+          <div class="social-icons">
+          </div>
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <button>Sign Up</button>
+        </form>
+      </div>
+      <div class="form-container sign-in">
+        <form>
+          <h1>Ingresar</h1>
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <a href="#">Olvidaste tu contraseña?</a>
+          <button>Login</button>
+        </form>
+      </div>
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>Bienvenido</h1>
+            <p>Ingresa ahora</p>
+            <button class="hidden" id="login">Resgristrar</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>Hola!</h1>
+            <p>
+              Registrate gratis aquí
+            </p>
+            <button class="hidden" id="register">Regístrate</button>
+          </div>
         </div>
-    </section>
-    
-    <section class="estadisticas">
-        <div class="contenedor-estadisticas">
-            <div class="bloque-estadistica">
-                <h2 class="numero">100%</h2>
-                <p class="descripcion">Revistas Indexadas</p>
-            </div>
-            <div class="bloque-estadistica">
-                <h2 class="numero">250+</h2>
-                <p class="descripcion">Artículos Publicados</p>
-            </div>
-        </div>
-    </section>
-    
+      </div>
+    </div>
   </main>
-<script src="/PaginaProyecto/script.js"></script>
+  <script src="/PaginaProyecto/scripts/login.js"></script>
 </body>
 </html>

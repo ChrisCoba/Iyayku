@@ -95,5 +95,3 @@ document.querySelector('.prev').addEventListener('click', () => {
 // Auto slide cada 5 segundos
 setInterval(() => moveSlider(1), 2500);
 
-gsap.registerPlugin(Draggable, ScrollTrigger);
-
